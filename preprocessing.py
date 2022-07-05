@@ -10,7 +10,7 @@ raw_data_path = os.path.join(RAW_DATA_DIR, RAW_DATA_FILE)
 # Read dataset
 df = pd.read_csv(raw_data_path, sep=",")
 
-
+print(raw_data_path)
 
 # Income to binary
 df['income'].replace(['<=50K','>50K'],[0,1], inplace=True) 
@@ -49,6 +49,9 @@ PROCESSED_DATA_DIR = os.environ["PROCESSED_DATA_DIR"]
 train_path = os.path.join(PROCESSED_DATA_DIR, 'train.csv')
 test_path = os.path.join(PROCESSED_DATA_DIR, 'test.csv')
 
+print(train_path)
 # Save csv
 train.to_csv(train_path, index=False)
 test.to_csv(test_path,  index=False)
+
+print("save success")

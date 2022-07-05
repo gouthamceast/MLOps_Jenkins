@@ -52,4 +52,3 @@ results_path = os.path.join(RESULTS_DIR, train_results_file)
 # Serialize and save metadata
 with open(results_path, 'w') as outfile:
     json.dump(train_metadata, outfile)
-
